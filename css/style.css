@@ -1,15 +1,19 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #F0F2F5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
-    font-family: Helvetica, Arial, sans-serif;
+    background-color: #F0F2F5;
 }
 
 .container-left {
     width: 55%;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -17,30 +21,33 @@ body {
 }
 
 .section1 {
-    width: 42vw;
+    width: 45vw;
     height: 50vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-left: 150px;
-
-
+    margin-left: 25%;
+    justify-content: center;
 }
 
-.h1 {
-    font-size: 4em;
-    color: #2B77F2;
-    font-weight: bold;
+.facebook-logo {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .p {
+    margin-left: 25px;
+    margin-top: 0;
+    padding: 0;
     font-size: 2em;
 }
 
 .container-right {
     width: 45%;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,21 +61,21 @@ body {
 }
 
 .box {
-    width: 30vw;
-    height: 50vh;
+    width: 450px;
+    height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #FFFFFF;
     align-items: center;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
 
 .input {
-    width: 25vw;
-    height: 6vh;
+    width: 400px;
+    height: 7vh;
     box-sizing: border-box;
     border: 1px solid #00000021;
     border-radius: 5px;
@@ -77,8 +84,8 @@ body {
 }
 
 .login {
-    width: 25vw;
-    height: 6vh;
+    width: 400px;
+    height: 7vh;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
@@ -89,12 +96,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .new-account {
-    width: 15vw;
-    height: 6vh;
+    width: 240px;
+    height: 7vh;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
@@ -105,7 +111,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 a {
@@ -116,4 +121,32 @@ a {
 .par1 {
     display: flex;
     justify-self: left;
+}
+
+@media screen and (max-width:900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-left {
+        align-items: center;
+    }
+
+    .container-right {
+        align-items: center;
+        margin-top: -50px;
+    }
+
+    .section1 {
+        align-items: center;
+        margin-top: -70px;
+        margin-left: 0px;
+    }
+
+    .p {
+        width: 400px;
+        margin-left: 20px;
+        text-align: center;
+    }
 }
